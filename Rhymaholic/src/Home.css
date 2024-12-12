@@ -1,0 +1,21 @@
+.home-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+.home-header h2 {
+    font-size: 1.3em;
+    color: #8c8c8c;
+}
+
+
