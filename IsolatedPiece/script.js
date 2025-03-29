@@ -137,14 +137,15 @@ let inputArea = document.getElementById("input");
 let outputArea = document.getElementById("output");
 let outputArea2 = document.getElementById("output2");
 
-inputArea.innerText = "jail style oil goal day lie coin bone loud view car door hair fear\nhere ding song hang rung strength cal dull erl eel pill school cab \non off the word free lit who ";
+inputArea.innerText = "jail \n\nstyle oil goal day lie coin bone loud view car door hair fear\nhere ding song hang rung strength cal dull erl eel pill school cab \non off the word free lit who ";
 
 inputArea.addEventListener("input", function() {
 
-   // inputArea.innerHTML = getWordSentence(inputArea.innerText);
+   const text = inputArea.innerText; 
 
-    outputArea.innerHTML = getWordSentence(input.innerText, false);
-    outputArea2.innerHTML = getWordSentence(input.innerText, true);
+    outputArea.innerHTML = getWordSentence(text, false);
+    console.log(getWordSentence(text, false));
+    outputArea2.innerHTML = getWordSentence(text, true);
 
 });
 
@@ -179,7 +180,7 @@ const highlightedText = (IPA, originalWord, colorMap, IsIPA) => {
 
     if (!IsIPA){
         const WordPieces = splitStringByPieces(originalWord, IPAvowels.length);
-        console.log(WordPieces);
+        //console.log(WordPieces);
 
         const finalStr = WordPieces.map((piece, index) => {
             const color = colorMap[IPAvowels[index]];
@@ -243,12 +244,21 @@ const processLine = (line, IsIPA) => {
 };
 
 const getWordSentence = (sentence, IsIPA) => {
-    return sentence
-        .split(/\n/)               // Split sentence into lines
-        .map(line => line.trim())   // Trim whitespace from each line
-        .filter(line => line.length > 0) // Remove empty lines
-        .map(line => processLine(line, IsIPA)) // Process each line
-        .join('<br>');              // Join lines with HTML line breaks
+    const lines = sentence.split(/\n/);
+    let emptyLineCount = 0;
+
+    return lines
+        .map(line => {
+            if (line.trim() === '') {
+                emptyLineCount++;
+                return emptyLineCount === 1 ? '&nbsp;' : '';
+            } else {
+                emptyLineCount = 0;
+                return processLine(line.trim(), IsIPA);
+            }
+        })
+        .filter(line => line !== '') 
+        .join('<br>'); 
 };
 
 const getIPA = (word) => {

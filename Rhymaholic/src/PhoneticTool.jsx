@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'; 
 
+
 const PhoneticTool = () => {
 
     const [dictionary, setDictionary] = useState({});
