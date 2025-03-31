@@ -26,6 +26,16 @@
 .tool-link {
     text-decoration: none;
 }
+
+#phonetic-tool {
+    background-image: url('public/phonetic-tool.png');
+}
+
+#RhymingTool {
+    background-image: url('/public/RhymingTool.png');
+}
+
+
 .tools-grid {
     display: flex;
     flex-wrap: wrap; /* This enables wrapping */
