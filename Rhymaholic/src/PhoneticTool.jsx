@@ -108,10 +108,10 @@ const PhoneticTool = () => {
                 <textarea id="input" value={inputSentence} onChange={handleInputChange} placeholder="Enter in some text" autoComplete="off"/>
 
                 <div className="button-group">
-                    <button id="button1" onClick={handleButtonClick}>{isIPA ? 'Show Normal' : 'Show IPA'}</button>
                     <button id="copyButton" onClick={copyText}>Copy</button>
                     <button id="clearButton" onClick={handleClear}>Clear</button>
                 </div>
+
                 <div id="output" dangerouslySetInnerHTML={{__html: isIPA ? ipaSentence.replace(/\n/g, '<br>') : inputSentence.replace(/\n/g, '<br>')}} /> 
             </div>
         </div>
