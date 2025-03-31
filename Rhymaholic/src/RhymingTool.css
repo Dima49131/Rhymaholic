@@ -1,0 +1,124 @@
+
+
+body {
+    /* background-color: #e7f1ff; */ 
+    background-color: #dadeff98;
+     
+ }
+ 
+ .fillArea {
+     transition: background-color 0.4s;
+ }
+ 
+ .fillArea:hover{
+     background-color: #d4f2ff; 
+ }
+ 
+ .input-container {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100px;
+     height: 40px;
+     margin-right: 3px;
+     margin-bottom: 2px;
+}
+ 
+ .parent-container {
+     display: flex;
+     justify-content: center; /* Centers items horizontally */
+     text-align: center;
+     align-items: center;
+ }
+ .parent-container2 {
+  display:grid;
+  height: 80px;
+  align-items: center;
+  text-align: center;
+}
+
+ .input-container input {
+     text-align: center;    
+     width: 100px;
+     height: 40px;
+
+     margin-top: 1px;
+     margin-bottom: 1px;
+     border: 1px solid #ccc; 
+     border-radius: 5px; 
+     font-size: 14px; 
+ }
+ 
+ 
+ .input-container span {
+     display: block;
+     font-size: 14px; 
+     color: #666; 
+     margin-top: 5px; 
+ }
+ 
+ #parentContainer2 {
+     background-color:#ffffff;
+    margin-bottom: 20px;
+     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow */ 
+ }
+
+ 
+
+ .containerButton {
+    font-size: 14px;
+        width: 100px;
+     height: 40px;
+     margin-right: 3px;
+     margin-bottom: 2px;
+     background-color: #004c82; 
+     color: #fff; 
+     border: none; 
+     border-radius: 5px; 
+     cursor: pointer; 
+     box-sizing: border-box; /* Includes padding and border */
+     transition: background-color 0.4s, border-color 0.4s; /* Add transition */
+}
+ 
+ 
+ .containerButton:hover { /* output button styling */
+     background-color: #0078f9; 
+     border: 2px solid #00f2ff; /* Add a border for visual separation */
+ }
+ 
+ .rhymeButton { /* output button styling */
+     padding: 0px; 
+     width: 100px;
+     height: 40px;
+     margin-top: 2px; 
+     font-size: 14px;
+
+     box-sizing: border-box; /* Includes padding and border */
+     background-color: #67a1ce; 
+     color: #fff; 
+     border: none; 
+     border-radius: 5px; 
+     cursor: pointer; 
+     transition: background-color 0.4s, border-color 0.4s; /* Add transition */
+ }
+ 
+ .rhymeButton:hover { /* output button styling */
+     background-color: #00bbf9; 
+     border: 1px solid #00f2ff; /* Add a border for visual separation */
+ }
+ 
+ 
+ .output{  
+  margin-left: 5px;
+  padding-left: 2px;
+  margin-right: 5px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 80px;
+  -webkit-text-fill-color: #000000;
+  font-size: 20px;
+ }
+ 
+ 
+ 
+ 
+ 

@@ -11,7 +11,6 @@ const PhoneticTool = () => {
     const [messageVisible, setMessageVisible] = useState(true);
 
     useEffect(() => {
-        // Load dictionary data
         fetch('/ipa-dictionary.json')
             .then(response => response.json())
             .then(data => setDictionary(data))

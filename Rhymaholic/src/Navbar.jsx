@@ -28,7 +28,7 @@ const NavBar = () => {
       <Link to="/"><button className="navbarbrand">Rhymaholic</button></Link>
         <ul className="nav-links">
             <li><Link to="/phonetictool">English to Phonetics Tool</Link></li>
-            <li><a href="#">Rhyming Tool</a></li>
+            <li><Link to="/rhymingtool">Rhyming Tool</Link></li>
             <li><a href="#">More coming soon!</a></li>
         </ul>
         <div className="navbar-icons">
