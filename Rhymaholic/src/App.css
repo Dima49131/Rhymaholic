@@ -2,7 +2,7 @@
 
 nav {
   background: linear-gradient(to right, #004c8c, #1e6ab4); /* Blue gradient */
-  padding: 10px 20px;
+  padding: 0px 0px;
   position:relative;
   top: 0;
   z-index: 1000;
@@ -18,18 +18,19 @@ nav {
 
 .navbarbrand {
   position: absolute;
+  top: 0;
   left: 0;
-  top: 5px;
+  padding: 13px;
   font-size: 24px;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  background-color:#1e69b400;
+  background-color: transparent;
   border: none;
   transition: background-color 0.3s ease;
-  }
+}
+
   .navbarbrand:hover {
       color: #7bf3fe;
       background-color:#002a4c;
@@ -66,12 +67,13 @@ nav {
 
 /* Navbar icons */
 .navbar-icons {
-  display: flex;
-  gap: 20px;
+  display:flex;
+  gap: 10px;
 }
 
 .navbar-icons i {
-  font-size: 20px;
+  
+  font-size: 22px;
   color: white;
   transition: color 0.3s ease;
 }

@@ -25,16 +25,14 @@ const NavBar = () => {
   return (
     <nav>
       <div className="navbar">
-      <Link to="/"><button className="navbarbrand">Rhymaholic</button></Link>
+        <Link to="/"><button className="navbarbrand">Rhymaholic</button></Link>
+
         <ul className="nav-links">
             <li><Link to="/phonetictool">English to Phonetics Tool</Link></li>
             <li><Link to="/rhymingtool">Rhyming Tool</Link></li>
             <li><a href="#">More coming soon!</a></li>
         </ul>
         <div className="navbar-icons">
-          <a href="https://www.linkedin.com/in/dimitri-anderson-b75869298/" target="_blank" className="icon" aria-label="LinkedIn">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
           <a href="https://github.com/Dima49131" target="_blank" className="icon" aria-label="GitHub">
             <i className="fab fa-github"></i>
           </a>

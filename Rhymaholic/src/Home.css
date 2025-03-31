@@ -28,7 +28,10 @@
 }
 .tools-grid {
     display: flex;
+    flex-wrap: wrap; /* This enables wrapping */
     gap: 20px;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
 .tool-box {
