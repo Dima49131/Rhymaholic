@@ -175,7 +175,6 @@ function resetGrid(){
   addInputContainer();
   addInputContainer();
   addInputContainer();
-  addInputContainer();
 }
 
 //printRhymes(inputWord,0,[1,2,3,'ms'],['']);
