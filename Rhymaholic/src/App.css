@@ -84,7 +84,7 @@ nav {
 
 
 
-/* Desktop view */
+/* Desktop mid view */
 @media (min-width: 769px) {
   .hamburger {
     display: none; /* Hide hamburger menu */
@@ -95,10 +95,14 @@ nav {
 }
 
 
-
+@media (min-width: 927px) {
+  .navbar-icons {
+    padding-right: 20px;
+  }
+}
 
 /* Responsive view for smaller screens */
-@media (max-width: 1050px) {
+@media (max-width: 927px) {
   nav {
       z-index: 1;
   }
@@ -155,7 +159,7 @@ nav {
   .navbar-icons {
     position: absolute; /* Prevents re-alignment when navbar expands */
     top: 20px; /* Adjust to maintain consistent placement */
-    left: 65%; /* Adjust to maintain consistent placement */
+    right: 50px; /* Adjust to maintain consistent placement */
     display: flex;
     justify-content: center;
     align-items: center;
