@@ -89,6 +89,9 @@ nav {
   .hamburger {
     display: none; /* Hide hamburger menu */
   }
+  .navbar {
+    height: 63px;
+  }
 }
 
 
@@ -273,7 +276,6 @@ textarea {
 }
 
 .button-group button:hover {
-  
   background-color: #1e6ab4;
 }
 

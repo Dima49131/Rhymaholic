@@ -23,12 +23,12 @@ body {
      margin-bottom: 2px;
 }
  
- .parent-container {
-     display: flex;
-     justify-content: center; /* Centers items horizontally */
-     text-align: center;
-     align-items: center;
- }
+.parent-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Prevents items from breaking into multiple lines */
+}
+
  .parent-container2 {
   display:grid;
   height: 80px;
@@ -57,16 +57,17 @@ body {
  }
  
  #parentContainer2 {
-     background-color:#ffffff;
+    background-color:#ffffff;
     margin-bottom: 20px;
-     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow */ 
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow */ 
  }
 
  
 
  .containerButton {
+    position:relative;
     font-size: 14px;
-        width: 100px;
+     width: 100px;
      height: 40px;
      margin-right: 3px;
      margin-bottom: 2px;

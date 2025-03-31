@@ -456,9 +456,13 @@ function getSlantOptions(char) {
           <button className="containerButton" onClick={fillRandom}>
             Random Fill
           </button>
+         
+         {/*
           <button className="containerButton" onClick={printAllRhymes}>
             Print All
           </button>
+        */}
+
           <button className="containerButton" onClick={resetGrid}>
             Reset
         </button>
