@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './Home.css'; // Import your styles
 
 const tools = [
-    { path: '/phonetictool', img: 'public/images/phonetic-tool.png', title: 'Phonetic Tool', description: 'Get to the bottom of how words work' },
-    { path: '/rhymingtool', img: 'public/images/RhymingTool.png', title: 'Rhyming Tool', description: "peace and doves, released with love" },
+    { path: '/phonetictool', img: 'public/phonetic-tool.png', title: 'Phonetic Tool', description: 'Get to the bottom of how words work' },
+    { path: '/rhymingtool', img: 'public/RhymingTool.png', title: 'Rhyming Tool', description: "peace and doves, released with love" },
 ];
 
 const Home = () => {
