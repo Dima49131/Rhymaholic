@@ -1,0 +1,73 @@
+
+/*
+Having cards not show
+matching bars got flow
+
+*/
+#titleHere {
+    display:grid;
+    height: 80px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color:#ffffff;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow */ 
+
+}
+
+
+
+.containerHere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff;
+
+
+}
+
+.subContainerHere {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: 5px; 
+    width: 70%; 
+    margin: 0 auto; 
+}
+
+#inputHere {
+    width: 80%;
+    font-size: 28px;
+    text-align: center;
+}
+#button1 {
+    width: 100px;
+}
+.outputHere {
+    margin-top: 5px;
+    width: 120px;
+    height: 400px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    min-width: 50px;
+    min-height: 100px;
+}
+
+@media (max-width: 425px) {
+    #inputHere {
+        font-size: 20px;
+    }
+    .outputHere {
+        width: 80px;
+        height: 200px;
+        font-size: 14px;
+    }
+    #titleHere {
+        font-size: 20px;
+    }
+}

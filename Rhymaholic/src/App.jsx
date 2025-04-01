@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import PhoneticTool from './PhoneticTool';
-import RhymingTool from './RhymingTool';
+import Home from './pages/Homepage/Home';
+import PhoneticTool from './pages/PhoneticTool/PhoneticTool';
+import RhymingTool from './pages/RhymingTool/RhymingTool';
+import RhymingToolSimple from './pages/RhymingToolSimple/RhymingToolSimple';
 
-import Navbar from './Navbar';
-import './App.css'; // Import your styles
+
+import Navbar from './components/Navbar';
+import './App.css'; 
 
 const App = () => {
     return (
@@ -14,9 +16,9 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/PhoneticTool" element={<PhoneticTool />} />
-                    <Route path="/RhymingTool" element={<RhymingTool />} />
-
+                    <Route path="/phonetictool" element={<PhoneticTool />} />
+                    <Route path="/rhymingtool" element={<RhymingTool />} />
+                    <Route path="/rhymingtoolsimplified" element={<RhymingToolSimple />} />
                 </Routes>
             </main>
         </Router>
