@@ -35,12 +35,15 @@ const NavBar = () => {
             <li><a href="#">More coming soon!</a></li>
         </ul>
         <div className="navbar-icons">
+          {/** 
           <a href="https://github.com/Dima49131" target="_blank" className="icon" aria-label="GitHub">
             <i className="fab fa-github"></i>
           </a>
           <a href="https://buymeacoffee.com/dima8ander5" target="_blank" className="icon" aria-label="Buy Me A Coffee">
             <i className="fas fa-coffee"></i>
           </a>
+          */}
+
         </div>
         <button className="hamburger" aria-label="Toggle Navigation Menu">
           <span className="line"></span>
