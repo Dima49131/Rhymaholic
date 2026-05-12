@@ -25,7 +25,7 @@ const RhymeChecker = () => {
     const rhymingWords = dictionaryArray
       .filter(([key, value]) => {
         if (value[0].length < 2) return doesItRhyme(wordData, value, "PS");
-        return doesItRhyme(wordData, value, "P");
+        return doesItRhyme(wordData, value, "PS");
       })
       .map(([key, value]) => {
         return [formatWord(key), value[3]]; // Return word and its frequency value
@@ -45,8 +45,11 @@ const RhymeChecker = () => {
     const lastLetterEqual = wordContent[2].slice(-1)[0] === thisWord[2].slice(-1)[0];
     const vowelsEqual = wordContent[0].toString() === thisWord[0].toString();
 
+    const lastPartEqual = wordContent[2].slice(-2) == thisWord[2].slice(-2);
+    
+        
     if (filter === "PS") {
-      return vowelsEqual && lastLetterEqual;
+      return vowelsEqual && lastPartEqual;
     }
     if (filter === "P") {
       return vowelsEqual && lastLetterEqual;
