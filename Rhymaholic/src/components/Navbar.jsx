@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.css'
 
 const NavBar = () => {
     useEffect(() => {
@@ -28,10 +29,10 @@ const NavBar = () => {
         <Link to="/"><button className="navbarbrand">Rhymaholic</button></Link>
 
         <ul className="nav-links">
-            <li><Link to="/rhymingtoolsimplified">Rhyme Simple</Link></li>
-            <li><Link to="/rhymingtool">Rhyming Tool</Link></li>
-            <li><Link to="/phonetictool">Phonetic Tool</Link></li>
-
+            <li><Link to="/highlighter">Rhyme Highlighter</Link></li>
+            <li><Link to="/phonetictool">English To Phonetics</Link></li>
+            <li><Link to="/rhymingtool">Rhyme Grid</Link></li>
+            <li><Link to="/rhymingtoolsimplified">Rhyme Grid v2</Link></li>
             <li><a href="#">More coming soon!</a></li>
         </ul>
         <div className="navbar-icons">

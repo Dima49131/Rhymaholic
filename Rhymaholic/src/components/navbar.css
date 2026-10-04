@@ -1,0 +1,205 @@
+/* Navbar container */
+
+nav {
+  background: linear-gradient(to right, #004c8c, #1e6ab4); /* Blue gradient */
+  padding: 0px 0px;
+  position:relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative; /* Enables relative positioning inside the navbar */
+}
+
+.navbarbrand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 13px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+  .navbarbrand:hover {
+      color: #7bf3fe;
+      background-color:#002a4c;
+  }
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7bf3fe;
+  background-color:#002a4c;
+
+}
+
+/* Navbar icons */
+.navbar-icons {
+  display:flex;
+  gap: 10px;
+}
+
+.navbar-icons i {
+  
+  font-size: 22px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-icons i:hover {
+  color: #7bf3fe;
+}
+
+
+
+/* Desktop mid view */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hide hamburger menu */
+  }
+  .navbar {
+    height: 63px;
+  }
+}
+
+
+@media (min-width: 927px) {
+  .navbar-icons {
+    padding-right: 20px;
+  }
+}
+
+/* Responsive view for smaller screens */
+@media (max-width: 927px) {
+  nav {
+      z-index: 1;
+  }
+
+  .navbarbrand {
+    color: rgb(255, 255, 255);
+    background-color:#1e69b400;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.navbarbrand:hover {
+    color: #7bf3fe;
+    background-color:#002a4c;
+}
+
+
+  .navbar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    height: 60px; /* Default height for collapsed navbar */
+    overflow: hidden; /* Hide overflowing content for smooth animation */
+    transition: height 0.3s ease; /* Smooth height transition */
+  }
+
+  .navbar.open {
+    height: 35vh; /* Expand navbar to desired height */
+  }
+
+  .nav-links {
+    visibility: hidden; 
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    background: linear-gradient(to right, #004c8c, #1e6ab4); /* Blue gradient */
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .navbar.open .nav-links {
+    visibility: visible; 
+    opacity: 1;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .navbar-icons {
+    position: absolute; /* Prevents re-alignment when navbar expands */
+    top: 20px; /* Adjust to maintain consistent placement */
+    right: 50px; /* Adjust to maintain consistent placement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger {
+    position: absolute; /* Prevents re-alignment when navbar expands */
+    top: 17px; /* Adjust to maintain consistent placement */
+    right: 10px; /* Adjust to maintain consistent placement */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  .hamburger .line {
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      transition: all 0.2s ease-in-out;  
+  }    
+  .hamburger:hover .line {
+      background-color: #7bf3fe; 
+  }
+  
+
+
+  .navbar.open .hamburger .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar.open .hamburger .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.open .hamburger .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

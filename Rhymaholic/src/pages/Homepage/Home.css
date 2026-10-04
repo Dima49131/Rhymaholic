@@ -28,18 +28,19 @@
 }
 
 .tools-grid {
-    padding: 20px;
+    padding: 0px;
     display: flex;
-    flex-wrap: wrap; /* This enables wrapping */
+    flex-wrap: wrap; 
     gap: 20px;
-    overflow-x: hidden; /* Hide horizontal overflow */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    overflow-x: hidden; 
+    overflow-y: hidden; 
     justify-content: center;
 }
 
 .tool-box {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
+    min-height: 420px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -51,13 +52,14 @@
 }
 
 .tool-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 
 .tool-image {
-    width: 150px;
-    height: auto;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
     margin-bottom: 10px;
 }

@@ -94,7 +94,7 @@ const MAX_CACHE_SIZE = 1000;
     
     <div>
         <div className="containerHere">
-        <h1 id="titleHere">Rhyming Simplified</h1>
+        <h1 id="titleHere">Rhyme Grid V2</h1>
         <input type="text" id="inputHere" autoComplete="off" value={inputValue} onChange={handleChange} placeholder="Type in some words"/>
       
       <div id="outputContainer">

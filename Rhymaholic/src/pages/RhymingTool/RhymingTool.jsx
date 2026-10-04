@@ -441,7 +441,7 @@ function getSlantOptions(char) {
     <div>
 
       <div className="parent-container2" id="parentContainer2">
-        <h1>Rhyming Software 4.0</h1>
+        <h1>Rhyme Grid</h1>
 
       </div>
 
