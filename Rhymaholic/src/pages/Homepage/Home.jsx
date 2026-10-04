@@ -15,7 +15,7 @@ const Home = () => {
         <div className="home-container">
             <header className="home-header">
                 <h1>Welcome to Rhymaholic</h1>
-                <h2>Here are some quick links to tools</h2>
+                <h2>A free and open source website to help you rhyme better</h2>
             </header>
             <div className="tools-grid">
                 {tools.map((tool, index) => (

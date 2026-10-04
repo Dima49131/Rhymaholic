@@ -40,37 +40,28 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2px;
-}
-
-.nav-links li {
-  position: relative;
-  flex: 1;
 }
 
 .nav-links a {
   display: block;
   box-sizing: border-box;
-
   color: white;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-
-  padding: 15px 10px;
+  padding: 25px 10px;
   text-align: center;
   white-space: nowrap;
 
   transition: color 0.3s ease,
-    transform 0.3s ease,
-    background-color 0.3s ease;
+transform 0.3s ease,
+background-color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #7bf3fe;
   background-color:#002a4c;
-
 }
 
 /* Navbar icons */
@@ -97,21 +88,24 @@ nav {
   .hamburger {
     display: none; /* Hide hamburger menu */
   }
-  .navbar {
+  .navbar {    
     height: 93px;
+
   }
   .navbarbrand {
     height: 93px;
   }
 
   .nav-links {
-      margin-left: 170px;
+      margin-left: 120px;
+      padding: 0px;
   }
 }
 
 
 @media (min-width: 927px) {
   .navbar-icons {
+    margin-right: 40px;
   }
 }
 
