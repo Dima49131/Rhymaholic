@@ -3,15 +3,13 @@ import '/src/App.css';
 import './RhymeTracker.css';
 
 //import { makeRhymes } from './RhymeTrackerLogic'
-
-import { getRandomWordObject } from '../../components/rhymingLogic';
-import { getUniqueWords, orderByCommonConsonants } from '../../components/slantFinder/salntFinderLogic';
-import SlantFinder from '../../components/slantFinder/slantFinder_UI';
+//import { getRandomWordObject } from '../../components/rhymingLogic';
+//import SlantFinder from '../../components/slantFinder/slantFinder_UI';
+//import { getUniqueWords, orderByCommonConsonants } from '../../components/slantFinder/salntFinderLogic';
 import { useTimers } from '../../components/useTimers';
 
 
 const RhymeTracker = () => {
-
 
 
     //makeRhymes();
@@ -49,6 +47,7 @@ const RhymeTracker = () => {
     }
 }
 
+/*
     const orderedWords = useMemo(() => {
         if (!lastWord) { return {}; }
         console.log(lastWord);
@@ -56,7 +55,7 @@ const RhymeTracker = () => {
         const uniqueWords = getUniqueWords(lastWord);
         return orderByCommonConsonants(uniqueWords, useBroadMatch);
         
-    }, [lastWord, useBroadMatch]);
+    }, [lastWord, useBroadMatch]);*/
     /**
     Generate random words
     be able to filter by syllable count

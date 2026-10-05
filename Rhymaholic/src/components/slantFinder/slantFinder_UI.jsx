@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react/prop-types
 const SlantFinder = ({ orderedWords }) => {
     return (
         <div className="rhyme-list">

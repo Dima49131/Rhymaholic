@@ -1,9 +1,25 @@
 import { useState, useEffect } from "react";
 
 
-import wordMap from '../data/wordMap.json' with { type: "json"};
-import { getRandomWordObject } from "./rhymingLogic.js";
+let wordMap = null;
 
+export async function loadWordMap() {
+    if (wordMap) {
+        return wordMap;
+    }
+
+    const response = await fetch("/data/wordMap.json");
+
+    if (!response.ok) {
+        throw new Error(`Failed to load wordMap: ${response.status}`);
+    }
+
+    wordMap = await response.json();
+
+    return wordMap;
+}
+
+import { getRandomWordObject } from "./rhymingLogic.js";
 
 
 export function useTimers(timerSettings, wordCount, selectedSyllables) {
@@ -60,7 +76,7 @@ export function useTimers(timerSettings, wordCount, selectedSyllables) {
             ) {
             newTimes[timer.id] = timer.duration;
             if (timer.id == "timerTwo") {
-                setWords(generateWords(wordCount, selectedSyllables));
+                generateWords(wordCount, selectedSyllables).then(setWords);
             }
             }
         }
@@ -74,9 +90,10 @@ export function useTimers(timerSettings, wordCount, selectedSyllables) {
     };
   }, [isRunning, timerSettings]);
 
-function start() {
-  setWords(generateWords(wordCount, selectedSyllables));
-  setIsRunning(true);
+async function start() {
+    const newWords = await generateWords(wordCount, selectedSyllables)
+    setWords(newWords);
+    setIsRunning(true);
 }
 
   function pause() {
@@ -105,10 +122,13 @@ function start() {
   }
 
 
-function generateWords(amount, selectedSyllables) {
+async function generateWords(amount, selectedSyllables) {
+    const wordMap = await loadWordMap();
+
     let wordArr = [];
     for (let i = 0; i < amount; i++) {
         let thisWordData = getRandomWordObject(wordMap, selectedSyllables, 500000);        
+        if (!thisWordData) { throw new Error("No matching words found"); }
         let thisWord = thisWordData[0];
         wordArr.push(thisWord);
     }    

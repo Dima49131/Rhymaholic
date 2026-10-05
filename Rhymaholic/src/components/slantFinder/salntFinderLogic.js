@@ -1,5 +1,5 @@
-import Dictionary from '../../data/phonetic-Dictionary.json';
-let dictionaryArray = Object.entries(Dictionary);
+//import Dictionary from '../../data/phonetic-Dictionary.json';
+//let dictionaryArray = Object.entries(Dictionary);
 
 
 //let thisWordMap = getUniqueWords("door");

@@ -1,15 +1,39 @@
 
 
-import * as fs from 'node:fs';
-import Dictionary from '../data/phonetic-Dictionary.json' with { type: "json" };
-let dictionaryArray = Object.entries(Dictionary);
+//import { writeFileSync } from "fs";
 
+let Dictionary = null;
+let dictionaryArray = null;
+let dictionaryPromise = null;
+
+async function loadDictionary() {
+    if (Dictionary) {
+        return Dictionary;
+    }
+
+    if (!dictionaryPromise) {
+        dictionaryPromise = fetch("/data/phonetic-Dictionary.json")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to load phonetic dictionary");
+                }
+                return response.json();
+            })
+            .then((dictionary) => {
+                Dictionary = dictionary;
+                dictionaryArray = Object.entries(dictionary);
+                return dictionary;
+            });
+    }
+
+    return dictionaryPromise;
+}
 
 //let uniqueWords = getUniqueWords();
 
 //console.log(getRandomWord(uniqueWords, [1, 2]));
 
-import wordMap from '../data/wordMap.json' with { type: "json"};
+//import wordMap from '../data/wordMap.json' with { type: "json"};
 //console.log(getRandomWordObject(wordMap, [1], 20000));
 
 
@@ -18,7 +42,7 @@ import wordMap from '../data/wordMap.json' with { type: "json"};
 
 
 
-
+/*
 function generateWordMapJson(){
   const wordMap = getUniqueWords(dictionaryArray);
   const data = Object.fromEntries(wordMap);
@@ -27,7 +51,7 @@ function generateWordMapJson(){
       JSON.stringify(data)
   );
 }
-
+*/
 export function getUniqueWords(syllableCount){
 
   let wordMap = new Map();
@@ -123,7 +147,8 @@ export function getRandomWord(wordMap, allowedSyllables) {
     return wordMap.get(randomKey)[0];
 }
 
-export function processWord(word){
+export async function processWord(word){
+    await loadDictionary();
     console.log(word);
     const wordData = Dictionary[word.toUpperCase()];
     if (!wordData) return [];
