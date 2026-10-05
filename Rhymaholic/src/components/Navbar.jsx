@@ -17,6 +17,7 @@ const NavBar = () => {
 
         <ul className="nav-links" onClick={closeNavbar}>
             <li><Link to="/highlighter">Rhyme Highlighter</Link></li>
+            <li><Link to="/rhymeTracker">Freestyle Word Generator</Link></li>
             <li><Link to="/phonetictool">English To Phonetics</Link></li>
             <li><Link to="/rhymingtool">Rhyme Grid</Link></li>
             <li><Link to="/rhymingtoolsimplified">Rhyme Grid v2</Link></li>

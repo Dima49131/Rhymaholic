@@ -40,6 +40,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
+  
 }
 
 .nav-links a {
@@ -52,11 +53,9 @@ nav {
   text-transform: uppercase;
   padding: 25px 10px;
   text-align: center;
-  white-space: nowrap;
-
   transition: color 0.3s ease,
-transform 0.3s ease,
-background-color 0.3s ease;
+  transform 0.3s ease,
+  background-color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -85,6 +84,7 @@ background-color 0.3s ease;
 
 /* Desktop mid view */
 @media (min-width: 769px) {
+
   .hamburger {
     display: none; /* Hide hamburger menu */
   }
@@ -100,6 +100,7 @@ background-color 0.3s ease;
       margin-left: 120px;
       padding: 0px;
   }
+
 }
 
 
@@ -107,6 +108,13 @@ background-color 0.3s ease;
   .navbar-icons {
     margin-right: 40px;
   }
+    .nav-links a {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+
+  }
+  
 }
 
 /* Responsive view for smaller screens */
@@ -143,7 +151,7 @@ background-color 0.3s ease;
   }
 
   .navbar.open {
-    height: 55vh; 
+    height: 100vh; 
   }
 
   .nav-links {

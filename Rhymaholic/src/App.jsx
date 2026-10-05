@@ -5,6 +5,7 @@ import PhoneticTool from './pages/PhoneticTool/PhoneticTool';
 import RhymingTool from './pages/RhymingTool/RhymingTool';
 import RhymingToolSimple from './pages/RhymingToolSimple/RhymingToolSimple';
 import Highlighter from './pages/Highlighter/Highlighter';
+import RhymeTracker from './pages/RhymeTracker/RhymeTracker';
 
 import Navbar from './components/Navbar';
 import './App.css'; 
@@ -20,6 +21,8 @@ const App = () => {
                     <Route path="/rhymingtool" element={<RhymingTool />} />
                     <Route path="/rhymingtoolsimplified" element={<RhymingToolSimple />} />
                     <Route path="/Highlighter" element={<Highlighter />} />
+                    <Route path="/rhymeTracker" element={<RhymeTracker />} />
+
                 </Routes>
             </main>
         </Router>

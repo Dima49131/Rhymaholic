@@ -5,6 +5,7 @@ import './Home.css'; // Import your styles
 
 const tools = [
    // { path: '/highlighter', img: 'highlighter.png', title: 'Rhyme Highlighter', description: "Visualize the underlying rhyming structure behind words. Keep in mind this is still a demo." },
+    { path: '/rhymeTracker', img: '/freestyle_word_gen.png', title: 'Freestyle Word Generator', description: 'Practice your wordplay and try to rhyme with the words that generate' },
     { path: '/phonetictool', img: '/phonetic-tool.png', title: 'English To Phonetics', description: 'See in real time as words get converted into there phonetic spelling using the International Phonetic Alphabet (IPA).' },
     { path: '/rhymingtoolsimplified', img: '/Simplified.png', title: 'Rhyme Grid v2', description: "A modernized design of the Rhyme Grid tool. Useful for very quick rhymes in a pinch." },
     { path: '/rhymingtool', img: '/RhymingTool.png', title: 'Rhyme Grid', description: "An older rhyming tool that displays rhymes in a grid like structure. Useful when displaying many rhymes at once." },
@@ -15,7 +16,7 @@ const Home = () => {
         <div className="home-container">
             <header className="home-header">
                 <h1>Welcome to Rhymaholic</h1>
-                <h2>A free and open source website to help you rhyme better</h2>
+                <h2>This is a free and open source website to help you rhyme better.</h2>
             </header>
             <div className="tools-grid">
                 {tools.map((tool, index) => (

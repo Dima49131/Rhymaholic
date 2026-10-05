@@ -1,0 +1,155 @@
+
+
+* {
+}
+
+.page_container {
+    margin: 20px auto;
+    padding: 0px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 927px){
+    .settings-panel {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 927px){
+    .settings-panel {
+        margin-top: 67px;
+    }
+}
+
+.settings-button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.settings-panel {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(100%, 360px);
+    height: 100dvh;
+    box-sizing: border-box;
+    padding: 28px;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    gap: 20px;
+    overflow-y: auto;
+    padding-bottom: 200px;
+    border-left: 1px solid lightgray;
+}
+
+.settings-panel.open {
+    transform: translateX(0);
+}
+
+.settings_control_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rhyme_tracker_label {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.timer {
+    font-size: 40px;
+    font-family: sans-serif;
+    transition: background-color 0.4s, border-color 0.4s; 
+    border: 2px solid transparent; 
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+  
+
+#word_timer_label {
+    white-space: nowrap;
+}
+
+#word-count {
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+}
+
+.timer_number_setting {
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+}
+
+
+.words_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.generated_word {
+    font-size: 55px;
+    padding: 10px;
+    text-align: center;
+}
+
+.rhyme_tracker_container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    gap: 20px;
+}
+
+.timer_container {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.timer_sub_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rhyme_tracker_button {
+    flex: 1;
+    width: 100%;
+    padding: 20px;   
+    border: none;
+}
+.rhyme_tracker_button.selected {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
