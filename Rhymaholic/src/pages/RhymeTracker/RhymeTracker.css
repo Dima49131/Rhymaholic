@@ -111,7 +111,7 @@
 }
 
 .generated_word {
-    font-size: 55px;
+    font-size: clamp(32px, 8vw, 55px);   
     padding: 10px;
     text-align: center;
 }
