@@ -91,8 +91,14 @@ export function useTimers(timerSettings, wordCount, selectedSyllables) {
   }, [isRunning, timerSettings]);
 
 async function start() {
-    const newWords = await generateWords(wordCount, selectedSyllables)
-    setWords(newWords);
+    
+    if (isRunning) { return; }
+    
+      if (words.length === 0) {
+        const newWords = await generateWords(wordCount, selectedSyllables);
+        setWords(newWords);
+    }
+
     setIsRunning(true);
 }
 
@@ -100,7 +106,7 @@ async function start() {
     setIsRunning(false);
   }
 
-  function reset() {
+  async function reset() {
     setIsRunning(false);
 
     const newTimes = {};
@@ -109,8 +115,13 @@ async function start() {
       newTimes[timer.id] = timer.duration;
     }
 
+    const newWords = await generateWords(wordCount, selectedSyllables);
+    setWords(newWords);
+
+
     setTimes(newTimes);
   }
+
 
   function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
