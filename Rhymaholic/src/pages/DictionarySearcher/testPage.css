@@ -1,0 +1,44 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#input_word {
+    width: min(90%, 500px);
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #a8d6ff;
+    border-radius: 3px;
+    padding: 1px 2px;
+    font-weight: 600;
+}
+.result-row {
+    display: grid;
+    grid-template-columns: 150px 200px 100px;
+    gap: 20px;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.result-header {
+    font-weight: bold;
+    border-bottom: 3px solid #ccc;
+}
+
+@media (max-width: 500px) {
+    .results { width: 95%; }
+
+    .result-row {
+        grid-template-columns: 1fr 1.5fr 0.8fr;
+        gap: 6px;
+        font-size: 14px;
+    }
+}

@@ -5,11 +5,13 @@ import './Home.css'; // Import your styles
 
 const tools = [
    // { path: '/highlighter', img: 'highlighter.png', title: 'Rhyme Highlighter', description: "Visualize the underlying rhyming structure behind words. Keep in mind this is still a demo." },
-    { path: '/rhymeTracker', img: '/freestyle_word_gen.png', title: 'Freestyle Word Generator', description: 'Practice your wordplay and try to rhyme with the words that generate' },
+    { path: '/DictionarySearch', img: '/Dictionary_Searcher.png', title: 'Dictionary Search', description: 'Search this sites Dictionary to find words that match. Results are sorted by frequency showing the top 50.' },
+   { path: '/rhymeTracker', img: '/freestyle_word_gen.png', title: 'Freestyle Word Generator', description: 'Practice your wordplay and try to rhyme with the words that generate' },
     { path: '/phonetictool', img: '/phonetic-tool.png', title: 'English To Phonetics', description: 'See in real time as words get converted into there phonetic spelling using the International Phonetic Alphabet (IPA).' },
     { path: '/rhymingtoolsimplified', img: '/Simplified.png', title: 'Rhyme Grid v2', description: "A modernized design of the Rhyme Grid tool. Useful for very quick rhymes in a pinch." },
     { path: '/rhymingtool', img: '/RhymingTool.png', title: 'Rhyme Grid', description: "An older rhyming tool that displays rhymes in a grid like structure. Useful when displaying many rhymes at once." },
 ];
+// /Dictionary_Searcher.png
 
 const Home = () => {
     return (

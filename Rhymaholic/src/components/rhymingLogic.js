@@ -6,27 +6,68 @@ let Dictionary = null;
 let dictionaryArray = null;
 let dictionaryPromise = null;
 
-async function loadDictionary() {
+
+export function getDictionaryArray() {
+    return dictionaryArray;
+}
+
+export async function loadDictionary() {
     if (Dictionary) {
         return Dictionary;
     }
 
     if (!dictionaryPromise) {
-        dictionaryPromise = fetch("/data/phonetic-Dictionary.json")
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Failed to load phonetic dictionary");
-                }
-                return response.json();
-            })
-            .then((dictionary) => {
-                Dictionary = dictionary;
-                dictionaryArray = Object.entries(dictionary);
-                return dictionary;
-            });
+
+    dictionaryPromise = loadDictionaryFile()
+        .then((dictionary) => {
+            Dictionary = dictionary;
+            dictionaryArray = Object.entries(dictionary);
+            return dictionary;
+        })
+        .catch((error) => {
+            dictionaryPromise = null;
+            throw error;
+        });
+
     }
 
     return dictionaryPromise;
+}
+
+async function loadDictionaryFile() {
+    if (typeof window !== "undefined") {
+        return loadDictionaryBrowser();
+    }
+
+    return loadDictionaryNode();
+}
+
+async function loadDictionaryBrowser() {
+    const response = await fetch("/data/phonetic-Dictionary.json");
+
+    if (!response.ok) {
+        throw new Error("Failed to load phonetic dictionary");
+    }
+
+    return response.json();
+}
+
+async function loadDictionaryNode() {
+    const fs = await import("fs/promises");
+    const path = await import("path");
+    const { fileURLToPath } = await import("url");
+
+    const currentFile = fileURLToPath(import.meta.url);
+    const currentDirectory = path.dirname(currentFile);
+
+    const dictionaryPath = path.join(
+        currentDirectory,
+        "../../public/data/phonetic-Dictionary.json"
+    );
+
+    const file = await fs.readFile(dictionaryPath, "utf8");
+
+    return JSON.parse(file);
 }
 
 //let uniqueWords = getUniqueWords();
